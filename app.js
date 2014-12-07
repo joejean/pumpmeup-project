@@ -15,7 +15,7 @@ var app = express();
 //Database Connection
 var dbName = 'quotesWebsite';
 
-var connectionString = 'mongodb://localhost:27017/' + dbName;
+var connectionString = 'mongodb://localhost:27017/'+dbName;
 if(process.env.NODE_ENV == 'production'){
     connectionString = "mongodb://joe:mashups2014@ds061370.mongolab.com:61370/heroku_app32271688";
 }
