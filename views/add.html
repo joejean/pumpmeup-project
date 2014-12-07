@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block mainContent %}
+  <div id="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+
+          <h1>Add your favorite Inspirational Quote</h1>
+          <h2 class="subtitle">Please make sure it is really inspirational!</h2>
+           {% if success %}
+
+            <div class="col-md-8">
+            <div class="alert alert-success alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <strong>Success!</strong> {{success.message}}
+            </div>
+            </div>
+          {% endif %}
+          {% if error %}
+          <div class="col-md-8">
+            <div class="alert alert-danger alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <strong>OOPS!</strong>{{ error}}
+            </div>
+          </div>
+          {% endif %}
+          <form class="form-horizontal signup" role="form" method="POST">
+
+            <div class="form-group">
+              <div class="col-md-8">
+              <label for="author" class="col-sm-2 control-label subtitle">Quote</label>
+              <textarea class="form-control" rows="3" name ="quote" required></textarea>
+              <label for="author" class="col-sm-2 control-label subtitle">Author</label>
+              <input type="text" class="form-control" name ="author" placeholder="Author Name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-8">
+                <div class="g-recaptcha" data-sitekey="6Ld52P4SAAAAAJD-GfX7Jt4dbBUXAlRhp5gvmMfL"></div>
+                <button type="submit" href="/add" class="btn btn-theme">Submit</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+        <div class="col-md-2">
+      </div>
+      </div>
+
+    </div>
+  </div>
+ {% endblock %}

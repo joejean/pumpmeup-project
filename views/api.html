@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block mainContent %}
+  <div id="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-11">
+          <h1>Welcome To our API Documentation</h1>
+          <div class= "jumbotron">
+          <p>
+          <table class="table table-bordered">
+            <thead>
+              <th>URL</th>
+              <th>HTTP Verb</th>
+              <th>POST Body</th>
+              <th>Response</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>/api/quotes</td>
+                <td>GET</td>
+                <td>Empty</td>
+                <td>Return all the quotes in the database.</td>
+              </tr>
+              <tr>
+                <td>/api/quotes</td>
+                <td>POST</td>
+                <td>JSON String with the fields "quote" and "author".</td>
+                <td>Add a new quote to the DB.</td>
+              </tr>
+
+              <tr>
+                <td>/api/quotes/like/:id</td>
+                <td>GET</td>
+                <td>Empty</td>
+                <td>Return a single quote whose id is the parameter id</td>
+              </tr>
+
+              <tr>
+                <td>/api/quotes/:id</td>
+                <td>PUT</td>
+                <td>Empty</td>
+                <td>Update by one the like field of a quote whose id is provided in the parameter id.</td>
+              </tr>
+
+               <tr>
+                <td>/api/quotes/:id</td>
+                <td>DELETE</td>
+                <td>Empty</td>
+                <td>Delete the quote whose id is provided.</td>
+              </tr>
+
+              <tr>
+                <td>/api/authors</td>
+                <td>GET</td>
+                <td>Empty</td>
+                <td>Return the name of all the authors in the database.</td>
+              </tr>
+
+              <tr>
+                <td>/api/authors/:author_Name</td>
+                <td>GET</td>
+                <td>Empty</td>
+                <td>Return all quotes by author author_Name</td>
+              </tr>
+
+              <tr>
+                <td>/api/quotes/trend</td>
+                <td>GET</td>
+                <td>Empty</td>
+                <td>Return the top 10 most liked quotes.</td>
+              </tr>
+
+              <tr>
+                <td>/api/quotes/search/:term</td>
+                <td>GET</td>
+                <td>Empty</td>
+                <td>Return all quotes that contain the search term "term".</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          </p>
+        </div>
+
+      </div>
+
+  </div>
+
+</div>
+
+</div>
+
+ {% endblock %}
