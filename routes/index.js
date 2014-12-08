@@ -3,6 +3,10 @@ var router = express.Router();
 var MongoClient = require('mongodb').MongoClient
 var Request = require('request');
 
+/*Check if JSON object is empty*/
+var isEmpty = function(obj){
+  return Object.keys(obj).length === 0;
+};
 
 
 /* GET home page. */
@@ -21,6 +25,10 @@ router.post('/', function(req, res){
     if(!err && response.statusCode ==200){
       var result= JSON.parse(body);
 
+    }
+    if(isEmpty(result)){
+      var err = "We could not find quotes for the keyword you entered. Please try a new word.";
+      res.render('index.html', {quotes:result, error: err });
     }
     res.render('index.html', {quotes:result });
   });
