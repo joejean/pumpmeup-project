@@ -2,7 +2,9 @@
 @import url('http://fonts.googleapis.com/css?family=Lato:400,300,700,900');
 
 body {
+  background: url(/images/background_1.jpg) no-repeat center center fixed;
   background-color: #f2f2f2;
+  background-size: cover;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -11,6 +13,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lato', sans-serif;
@@ -125,29 +128,10 @@ a.navbar-brand:hover {
 /* main */
 
 #main {
-	background-color: #444;
-	/*background: url(/images/background_1.jpg) no-repeat center top;*/
-  background: url(/images/background_1.jpg) no-repeat center center fixed;
-  webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-	margin-top: -20px;
-	padding-top: 150px;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 650px;
-	width: 100%;
-
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  min-height: 650px;
+  width: 100%;
+  margin-top: -20px;
+  padding-top: 150px;
 }
 
 
@@ -252,3 +236,16 @@ p.copyright {
   }
 
 }
+
+#footer.navbar-default.navbar-fixed-bottom
+ {
+
+      color:white;
+      padding:1em 0;
+      background: #fd680e;
+ }
+
+ #footer.navbar-default.navbar-fixed-bottom p
+ {
+      margin:0;
+ }
